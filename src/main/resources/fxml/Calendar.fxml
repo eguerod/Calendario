@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="view" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
 	<padding>
@@ -67,21 +68,27 @@
 			<fx:reference source="diciembreCalendar" />
 		</java.util.ArrayList>
 	</fx:define>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
 		</GridPane>
 	</center>
    <top>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints vgrow="ALWAYS" />
         </rowConstraints>
          <children>
       				<Button mnemonicParsing="false" onAction="#onPreviousButtonAction" text="&lt;" />
-      				<Label fx:id="yearLabel" text="&lt;Año&gt;" GridPane.columnIndex="1" />
+      				<Label fx:id="yearLabel" text="&lt;Año&gt;" GridPane.columnIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
       				<Button mnemonicParsing="false" onAction="#onNextButtonAction" text="&gt;" GridPane.columnIndex="2" />
          </children>
       </GridPane>
