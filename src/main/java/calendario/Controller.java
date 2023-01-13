@@ -42,7 +42,7 @@ public class Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		year.set(LocalDate.now().getYear());
 		yearLabel.textProperty().bind(year.asString());
-		
+
 		int numMes = 0;
 		for (MonthCalendar mes : mesesCalendarList) {
 			mes.setMonthProperty(numMes + 1);
