@@ -63,6 +63,7 @@ public class MonthCalendar extends GridPane implements Initializable {
 		for (int i = dia1 + diaFinal; i < diasLabelList.size(); i++) {
 			diasLabelList.get(i).setText("");
 		}
+		
 		mesLabel.setText(obtenerMes(monthProperty.get()));
 	}
 
